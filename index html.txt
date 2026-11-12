@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>手軽なkakeiアプリ</title>
+  <meta name="apple-mobile-web-app-title" content="手軽なkakeiアプリ">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <link rel="icon" type="image/png" href="icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <script>
+    const targetUrl = "https://kakeibo-app-m2pingcqkg9mgznekshyrv.streamlit.app";
+
+    // ホーム画面のアイコンから起動したときだけ、自動で転送する
+    const isStandalone =
+      window.navigator.standalone === true ||
+      window.matchMedia("(display-mode: standalone)").matches;
+
+    if (isStandalone) {
+      window.location.replace(targetUrl);
+    }
+  </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 50px; color: #555;">
+  <p>「手軽なkakeiアプリ」</p>
+  <p style="font-size: 0.9em;">ホーム画面に追加すると、アイコンから起動できます。</p>
+  <p style="font-size: 0.8em;"><a href="https://kakeibo-app-m2pingcqkg9mgznekshyrv.streamlit.app">アプリを直接開く</a></p>
+</body>
+</html>
